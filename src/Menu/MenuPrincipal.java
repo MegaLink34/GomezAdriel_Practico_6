@@ -93,6 +93,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Salir");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -116,8 +121,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         escritorio.removeAll();
         escritorio.repaint();
         VistaBusquedaCliente vistaBusquedaCliente = new VistaBusquedaCliente(directorio.getDirectorio());
-        vistaBusquedaCliente.setVisible(true);
         escritorio.add(vistaBusquedaCliente);
+        vistaBusquedaCliente.setVisible(true);
         escritorio.moveToFront(vistaBusquedaCliente);
     }//GEN-LAST:event_jMenuItemBuscarClienteActionPerformed
 
@@ -131,8 +136,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         escritorio.removeAll();
         escritorio.repaint();
         VistaAgregarCliente vistaAgregarCliente = new VistaAgregarCliente(directorio.getDirectorio());
-        vistaAgregarCliente.setVisible(true);
         escritorio.add(vistaAgregarCliente);
+        vistaAgregarCliente.setVisible(true);
         escritorio.moveToFront(vistaAgregarCliente);
     }//GEN-LAST:event_jMenuItemAgregarClienteActionPerformed
 
@@ -141,10 +146,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         escritorio.removeAll();
         escritorio.repaint();
         VistaBorrarCliente vistaBorrarCliente = new VistaBorrarCliente(directorio.getDirectorio());
-        vistaBorrarCliente.setVisible(true);
         escritorio.add(vistaBorrarCliente);
+        vistaBorrarCliente.setVisible(true);
         escritorio.moveToFront(vistaBorrarCliente);
     }//GEN-LAST:event_jMenuItemBorrarClienteActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+          System.exit(0);
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
